@@ -1,0 +1,86 @@
+const { v4: uuidv4 } = require('uuid');
+
+let dummyVideoData = [
+    {
+        id: 1,
+        youtubeId: "https://www.youtube.com/watch?v=nhshYevehZg",
+        thumbnailUrl: "https://i.ytimg.com/vi/nhshYevehZg/hq720.jpg",
+        name: "Purpose Rap",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 2,
+        youtubeId: "https://www.youtube.com/watch?v=ijE2MMtzkHg",
+        thumbnailUrl: "https://i.ytimg.com/vi/ijE2MMtzkHg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCfTA4YPO8rPisHVLDWFSuuehOUA",
+        name: "Afsanay",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 3,
+        youtubeId: "https://www.youtube.com/watch?v=jIQ0Dx-4peE",
+        thumbnailUrl: "https://i.ytimg.com/vi/jIQ0Dx-4peE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7NtX50eo_Z0H50m6dYmPcTRScEg",
+        name: "Gumaan",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 4,
+        youtubeId: "https://www.youtube.com/watch?v=aexf8V5LDhc",
+        thumbnailUrl: "https://i.ytimg.com/vi/aexf8V5LDhc/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8ApKtZFtLQA33vCR2ntw4cl7AGQ",
+        name: "Villain",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 5,
+        youtubeId: "https://www.youtube.com/watch?v=o907r6NsK9s",
+        thumbnailUrl: "https://i.ytimg.com/vi/o907r6NsK9s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB682g_SSn0iCtgvyCMntZB5sxwbQ",
+        name: "Saza-E-Maut",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 6,
+        youtubeId: "https://www.youtube.com/watch?v=o907r6NsK9s",
+        thumbnailUrl: "https://i.ytimg.com/vi/o907r6NsK9s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB682g_SSn0iCtgvyCMntZB5sxwbQ",
+        name: "Saza-E-Maut",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 7,
+        youtubeId: "https://www.youtube.com/watch?v=r5Ak4KY8-cs",
+        thumbnailUrl: "https://i.ytimg.com/vi/r5Ak4KY8-cs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpoP8q0xtHUhr43RoNHh6x6__wgw",
+        name: "INTRODUCTION",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 8,
+        youtubeId: "https://www.youtube.com/watch?v=5-jJzODf5xo",
+        thumbnailUrl: "https://i.ytimg.com/vi/5-jJzODf5xo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwBg04rMioKEYynZmH9VAwSkh4-g",
+        name: "KARMA - BASIC BARS | FREEVERSE",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 9,
+        youtubeId: "https://www.youtube.com/watch?v=DgdScH6nXs8",
+        thumbnailUrl: "https://i.ytimg.com/vi/DgdScH6nXs8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbmn0p4CwNJHKdckq0AQwH8HZFxA",
+        name: "KARMA - BASIC BARS 2 | FREEVERSE",        
+        likes: 0,
+        dislikes: 0,
+    },
+    {
+        id: 10,
+        youtubeId: "https://www.youtube.com/watch?v=erWlHBJLA20",
+        thumbnailUrl: "https://i.ytimg.com/vi/erWlHBJLA20/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDARvLx0RNoT08OApiYii1hKV51uQ",
+        name: "Khana Badosh | JJ47 | JOKHAY | NABEEL AKBAR | TALHA ANJUM",        
+        likes: 0,
+        dislikes: 0,
+    },
+]
+
+module.exports = dummyVideoData;
