@@ -1,15 +1,16 @@
 const mongoose = require("mongoose")
 
-const initializeDBConnection = async () => {  
-  try{
-    await mongoose.connect("mongodb+srv://gaurav:Gaurav1999@@cluster0.wbcja.mongodb.net/rapify?retryWrites=true&w=majority", {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
+const initializeDBConnection = async () => {
+  console.log(process.env.DATABASE_URL);
+  try {
+    await mongoose.connect(process.env.DATABASE_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
     })
     console.log("Connected Successfully To Database")
-  } catch(error){
+  } catch (error) {
     console.error("Database Connection Failed...", error)
-  } finally{
+  } finally {
 
   }
 }
