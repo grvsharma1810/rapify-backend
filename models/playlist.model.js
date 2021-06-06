@@ -10,9 +10,13 @@ const PlaylistSchema = new mongoose.Schema({
 			ref: 'Video'
 		},
 		time: { type: Date, default: Date.now }
-	}]
+	}],
+	user: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User'
+	},
 })
 
 const Playlist = mongoose.model("Playlist", PlaylistSchema)
 
-module.exports = { Playlist }
+module.exports = Playlist
