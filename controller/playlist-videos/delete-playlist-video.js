@@ -7,7 +7,7 @@ const deletePlaylistVideo = async (req, res) => {
         const { videoId } = req.params;
         await playlist.videos.pull({ _id: videoId })
         await playlist.save();
-        res.status(200).json({ success: true, data: { deleted: videoId } })
+        res.status(200).json({deleted: videoId })
     } catch (err) {
         res.status(500).json({ success: false, message: "unable to find playlist video", errorMessage: err.message })
     }

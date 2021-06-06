@@ -12,9 +12,9 @@ const updatePlaylistById = async (req, res) => {
                 }
             })
             const newPlaylist = await playlist.save();
-            res.status(200).json({ success: true, data: { playlist: newPlaylist } })
+            res.status(200).json({playlist: newPlaylist})
         } else {
-            res.status(404).json({ success: true, data: {}, message: "No playlist found with this ID" })
+            res.status(404).json({ message: "No playlist found with this ID" })
         }
     } catch (err) {
         res.status(500).json({ success: false, message: "unable to find playlist", errorMessage: err.message })

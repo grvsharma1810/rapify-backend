@@ -21,26 +21,6 @@ app.use(cors())
 
 initializeDBConnection();
 
-
-// app.use("/login", async (req, res) => {
-// 	try {
-// 		const userCredentials = {
-// 			email: req.body.email,
-// 			password: req.body.password
-// 		}
-// 		console.log({ userCredentials })
-// 		const user = await User.findOne(userCredentials);
-// 		console.log({ user })
-// 		if (user) {
-// 			res.status(200).json({ success: true, data: { user } });
-// 		} else {
-// 			res.status(401).json({ success: false, message: "User Credentials are invalid" });
-// 		}
-// 	} catch (err) {
-// 		res.status(500).json({ success: false, message: "unable to login user", errorMessage: err.message })
-// 	}
-// })
-
 app.use("/", authRoutes);
 app.use("/users", authVerify, usersRoutes);
 app.use("/videos", (req, res, next) => { req.userId = req.query.userId; next(); }, videosRoutes);
