@@ -5,12 +5,12 @@ const VideoSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User'
 	},
-	youtubeUrl: String,
-	thumbnailUrl: String,
-	views: Number,
-	name: String,
-	likes: Number,
-	dislikes: Number,
+	youtubeUrl: { type: String },
+	thumbnailUrl: { type: String },
+	views: { type: Number },
+	name: { type: String },
+	likes: { type: Number },
+	dislikes: { type: Number },
 })
 
 const Video = mongoose.model("Video", VideoSchema);

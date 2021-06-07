@@ -12,7 +12,7 @@ const updateVideo = async (req, res) => {
                 }
             })
             const newVideo = await video.save();
-            res.status(200).json({ video: newVideo } )
+            res.status(200).json({ video: newVideo })
         } else {
             res.status(404).json({ message: "No video found with this ID" })
         }

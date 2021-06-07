@@ -25,7 +25,7 @@ app.use("/", authRoutes);
 app.use("/users", authVerify, usersRoutes);
 app.use("/videos", (req, res, next) => { req.userId = req.query.userId; next(); }, videosRoutes);
 app.use("/playlists", authVerify, playlistsRoutes);
-app.use("/playlists/:playlistId/videos", (req, res, next) => {	
+app.use("/playlists/:playlistId/videos", (req, res, next) => {
 	req.playlistId = req.params.playlistId;
 	next();
 }, authVerify, playlistVideosRoutes);

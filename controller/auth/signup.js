@@ -36,8 +36,7 @@ const signup = async (req, res) => {
         await newLikedPlaylist.save();
         await newHistoryPlaylist.save();
         await newWatchLaterPlaylist.save();
-        
-        savedUser = await savedUser.save();
+                
         res.status(201).json({ success: true })
     } catch (err) {
         console.log(err);

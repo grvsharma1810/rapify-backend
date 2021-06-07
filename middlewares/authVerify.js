@@ -5,16 +5,16 @@ const authVerify = async (req, res, next) => {
     if (!token) {
         res.status(401).json({ message: "Un-authenticated Request" })
     }
-    try{
+    try {
         const tokenData = jwt.verify(token, process.env.JWT_SECRET_KEY)
         if (tokenData) {
             req.tokenData = tokenData;
             return next()
         }
-    } catch(error){
+    } catch (error) {
         console.log(error);
         res.status(401).json({ message: "Un-authenticated Request" })
-    } 
+    }
 }
 
 module.exports = authVerify;
