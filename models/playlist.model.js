@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const PlaylistSchema = new mongoose.Schema({
 	name: { type: String },
-	type: { type: String },
+	type: { type: String, enum: ['default', 'user-created'] },
 	videos: [{
 		_id: mongoose.Schema.Types.ObjectId,
 		videoId: {

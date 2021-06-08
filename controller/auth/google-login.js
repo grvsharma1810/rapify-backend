@@ -44,6 +44,7 @@ const googleLogin = async (req, res) => {
             await newWatchLaterPlaylist.save();
         }
         const token = jwt.sign({ userId: user._id, email: user.email }, process.env.JWT_SECRET_KEY, { expiresIn: '24h' })
+        user.password = undefined;
         res.status(200).json({ user, token });
     } catch (err) {
         console.log(err);
