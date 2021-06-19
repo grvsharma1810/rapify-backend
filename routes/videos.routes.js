@@ -10,6 +10,6 @@ const router = express.Router();
 router.get("/", getVideos);
 router.post("/", authVerify, createVideo);
 router.get("/:videoId", getVideoById);
-router.post("/:videoId", authVerify, updateVideo);
+router.post("/:videoId", updateVideo);
 
 module.exports = router
